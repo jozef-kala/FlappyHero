@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flappy Bird</title>
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            background: #7bb0df;
+        }
+        .bottom {
+            position: absolute;
+            left: 0;
+            right:0;
+            top: 460px;
+            bottom:0;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="bottom"></div>
+    <script src="js/sound.js" ></script>
+    <script src="js/events.js" ></script>
+    <script src="js/obstacle.js" ></script>
+    <script src="js/flappy.js" ></script>
+    <script src="js/game.js" ></script>
+    <script>
+        const game = new Game({
+            mobile: false,
+            width : 800,
+            height: 480,
+            obstacle: {
+                width: 50,
+                speed: 42,
+                minSpace: 150,
+                maxSpace: 240
+            },
+            flappy: {
+                width: 40,
+                height: 40,
+                position: 30,
+                boost: 220,
+                gravity: 65,
+                hitGravity: 200
+            },
+            menu: {
+                left: 200,
+                top: 100
+            }
+        });
+        game.start();
+    </script>
+</body>
+</html>
