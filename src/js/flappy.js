@@ -80,15 +80,8 @@ class Flappy {
 
     draw () {
         let {x, y, width, height, imageSize, currentFrame, ctx} = this;
-
-        let rotate = (this.y) /100;
-        if(rotate>0.1) rotate=0.1;
-        if(rotate<-0.1) rotate=-0.1;
-        //this.rotate= this.rotate+rotate;
-
         ctx.save();
         ctx.translate(  x,  y);
-       // ctx.rotate(90*Math.PI/180);
         ctx.rotate(this.rotate);
         ctx.drawImage(this.image, imageSize * currentFrame, 0,
             imageSize, imageSize,

@@ -64,8 +64,8 @@ class Game {
         this.clear();
 
         // little grass
-        ctx.fillStyle = 'green';
-        ctx.fillRect(0, height - 20, width, height);
+        ///ctx.fillStyle = 'green';
+        //ctx.fillRect(0, height - 20, width, height);
 
         switch (this.gameState) {
 

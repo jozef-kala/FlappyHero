@@ -27,27 +27,29 @@
     <script src="js/flappy.js" ></script>
     <script src="js/game.js" ></script>
     <script>
+        const scaleX = 1; // window.innerWidth / 800;
+        const scaleY = 1; //window.innerHeight / 480;
+
         const game = new Game({
-            mobile: false,
-            width : 800,
-            height: 480,
+            width : 800 * scaleX,
+            height: 480 * scaleY,
             obstacle: {
-                width: 50,
-                speed: 42,
-                minSpace: 150,
-                maxSpace: 240
+                width: 50 * scaleX,
+                speed: 42 * scaleX,
+                minSpace: 150 *scaleY,
+                maxSpace: 240 *scaleY
             },
             flappy: {
-                width: 40,
-                height: 40,
-                position: 30,
-                boost: 220,
-                gravity: 65,
-                hitGravity: 200
+                width: 40 * scaleX,
+                height: 40 *scaleY,
+                position: 30 * scaleX,
+                boost: 220 *scaleY,
+                gravity: 65 *scaleY,
+                hitGravity: 200 *scaleY
             },
             menu: {
-                left: 200,
-                top: 100
+                left: 200 * scaleX,
+                top: 100 *scaleY
             }
         });
         game.start();
